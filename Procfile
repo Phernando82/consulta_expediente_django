@@ -1,0 +1,1 @@
+web: gunicorn consulta_expediente.wsgi --log-file -
