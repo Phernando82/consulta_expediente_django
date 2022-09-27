@@ -1,2 +1,2 @@
-# consulta_expediente_django
-Sistema Web para consulta de expedientes de nacionalidade espanhol, desenvolvido com Django
+# Consulta Expediente / Django
+Sistema Web para consulta de expedientes de nacionalidade espanhola, desenvolvido com Django
