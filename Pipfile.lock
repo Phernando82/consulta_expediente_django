@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "262d26790fd57b2bb865081a7f013e3fc6735425a34151f9f62d246ec6c7beba"
+            "sha256": "183f34e992e7bb23538d2dd1b53ea5da675662e89faba60aeafb5925b8349775"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -39,6 +39,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==1.27.82"
+        },
+        "collectfast": {
+            "hashes": [
+                "sha256:2f6abc8cab7ec5114a7a9a3660ab629ec142556957220aa82857dc9b4381490d",
+                "sha256:e716b2234ab50b5f1010b0d78c3fae8c6aebdb8b7c66ef5568503c33c1a5e19a"
+            ],
+            "index": "pypi",
+            "version": "==2.2.0"
         },
         "dj-database-url": {
             "hashes": [
@@ -199,6 +207,14 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==0.4.3"
+        },
+        "typing-extensions": {
+            "hashes": [
+                "sha256:25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02",
+                "sha256:e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==4.3.0"
         },
         "tzdata": {
             "hashes": [
