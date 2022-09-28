@@ -15,6 +15,8 @@ from pathlib import Path
 
 import dj_database_url
 from decouple import config, Csv
+from django.contrib import staticfiles
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,6 +31,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+
+AUTH_USER_MODEL = 'base.User'
 
 # Application definition
 
@@ -136,7 +140,7 @@ if AWS_ACCESS_KEY_ID:
     AWS_PRELOAD_METADATA = True
     AWS_AUTO_CREATE_BUCKET = False
     AWS_QUERYSTRING_AUTH = True
-    AWS_S3_CUSTOM_DOMAIN = None
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
     AWS_DEFAULT_ACL = None
 
     COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
