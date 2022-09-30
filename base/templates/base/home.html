@@ -1,15 +1,15 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap 4, from LayoutIt!</title>
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
-
+    <title>Consulta Expediente</title>
+    <meta name="description" content="Página de la aplicación Consulta Expediente">
+    <meta name="author" content="Phernando">
+    <link rel="icon" type="image.png" href="{% static 'img/favicon.ico' %}"/>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -20,39 +20,17 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <a class="navbar-brand" href="{% url 'base:home' %}">Consulta Expediente</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+        </ul>
+    </div>
 </nav>
 
 <div class="container-fluid">
@@ -60,20 +38,43 @@
         <div class="col-md-12">
             <div class="jumbotron">
                 <h2>
-                    Hello, world!
+                    Consulta Expediente
                 </h2>
                 <p>
-                    This is a template for a simple marketing or informational website. It includes a large callout
-                    called the hero unit and three supporting pieces of content. Use it as a starting point to create
-                    something more unique.
-                </p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                    Consulta Expediente es una plataforma donde puedes buscar varios expedientes de nacionalidad
+                    española por residencia a la vez.<br/>
+                    Accede a la plataforma, registra tantos clientes y procesos como quieras y el sistema
+                    automáticamente los buscará a todos y los guardará en una hoja de cálculo o enviará una alerta.
                 </p>
             </div>
         </div>
     </div>
 </div>
+
+<footer class="main-footer mt-5 pt-4 text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Contacta con nosotros</h3>
+                <address>
+                    +34 665-527-700
+                    <br/>
+                    <a href="mailto: {{ contato_email }}" class="text-light">{{ contato_email }}</a>
+                </address>
+            </div>
+
+        </div>
+    </div>
+    <div class="rights pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-3">
+                    {% now 'Y' %} Consulta Expediente.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
