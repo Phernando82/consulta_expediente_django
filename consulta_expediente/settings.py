@@ -35,6 +35,8 @@ DEBUG = config('DEBUG', cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 AUTH_USER_MODEL = 'base.User'
+LOGIN_REDIRECT_URL = '/consulta/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'base',
+    'expedientes',
 ]
 
 MIDDLEWARE = [

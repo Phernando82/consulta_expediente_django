@@ -16,7 +16,7 @@ def test_status_code(resp):
 
 
 def test_title(resp):
-    assert_contains(resp, '<title>Consulta Expediente</title>')
+    assert_contains(resp, '<title>Consulta Expedientes - Home</title>')
 
 
 def test_home_link(resp):
